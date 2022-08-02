@@ -12,14 +12,22 @@ import {
 
 export default function App() {
 
-  const [email, setEmail] = useState("");
-  const [pasword, setpassWord] = useState("");
+  const [email, setEmail] = useState('');
+  const [pasword, setpassWord] = useState('');
 
   return (
     <View style={styles.container}>
       <Image style={styles.logo} source={require('./assets/favicon.png')} />
-      <Text>Vindicators</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.appName}>Vindicators Image Recognition</Text>
+
+      <StatusBar style='auto' />
+      <View style={styles.inputView}>
+        <TextInput style={styles.TextInput}
+          placeholder='Email'
+          placeholderTextColor='#003f5c'
+          onChangeText={(password) => setPassword(password)}
+        />
+      </View>
     </View>
   );
 }
@@ -32,13 +40,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   logo: {
+    marginBottom: 20,
+  },
+  appName: {
     marginBottom: 40,
   },
   inputView: {
-
+    backgroundColor: '#FFC0CB',
+    borderRadius: 30,
+    width: '70%',
+    height: 45,
+    marginBottom: 20,
   },
   TextInput: {
-
+    height: 50,
+    flex: 1,
+    padding: 10,
+    marginLeft: 20,
   },
   forgotButton: {
 
