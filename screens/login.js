@@ -5,6 +5,7 @@ import { Icon } from '@expo/vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/Fontisto'
 import { Text, View, StyleSheet } from 'react-native';
 import { CheckBox } from "react-native-web";
+import { globalStyles } from '../styles/global';
 
 export default function Login() {
 
@@ -13,7 +14,7 @@ export default function Login() {
     const [checked, setChecked] = useState(false);
     
     return (
-        <View>
+        <View style={globalStyles.container}>
             <View>
                 <TextInput 
                     label='Email'
@@ -60,45 +61,3 @@ export default function Login() {
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      flexDirection: 'row',
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    logo: {
-      marginBottom: 20,
-    },
-    appName: {
-      marginBottom: 40,
-    },
-    inputView: {
-      backgroundColor: '#FFC0CB',
-      borderRadius: 30,
-      width: '70%',
-      height: 45,
-      marginBottom: 20,
-      alignItems: 'center'
-    },
-    TextInput: {
-      height: 50,
-      flex: 1,
-      padding: 10,
-      marginLeft: 20,
-    },
-    forgotButton: {
-  
-    },
-    loginButton: {
-      width: '80%',
-      borderRadius: 25,
-      height: 50,
-      alignItems: 'center',
-      justifyContent: 'center',
-      marginTop: 40,
-      backgroundColor: '#FF1493',
-    },
-  });
