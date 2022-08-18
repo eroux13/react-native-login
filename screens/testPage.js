@@ -1,4 +1,4 @@
-import { TextInput, Checkbox, Button } from "react-native-paper";
+import { Button } from "react-native-paper";
 import { View, Text } from 'react-native';
 import { globalStyles } from '../styles/global';
 
