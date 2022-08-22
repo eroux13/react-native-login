@@ -9,9 +9,9 @@ export default function SignUp({ navigation }) {
   return (
     <View style={globalStyles.container}>
         <StatusBar style='dark' />
-        <Text>Welcome Home Vindicator</Text>
-
-
+        <View style={globalStyles.home}>
+            <Text>Welcome Home Vindicator</Text>
+        </View>
     </View>
   );
 }
