@@ -3,6 +3,7 @@ import { createAppContainer } from 'react-navigation';
 import SignUp from '../screens/signUp';
 import Login from '../screens/login';
 import Home from '../screens/home';
+import MainTabs from '../screens/mainContainer';
 
 const screens = {
     SignUp: {
@@ -18,7 +19,7 @@ const screens = {
         }
     },
     Home: {
-        screen: Home,
+        screen: MainTabs,
         navigationOptions: {
             title: 'Welcome Home Vidicator'
         }
