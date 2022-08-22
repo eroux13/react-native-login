@@ -22,7 +22,7 @@ export const globalStyles = StyleSheet.create({
         alignItems: 'center'
     },
     camera: {
-        alignItems: 'center'
+        flex: 1
     },
     language: {
         alignItems: 'center'
