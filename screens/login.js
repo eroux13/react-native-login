@@ -11,6 +11,9 @@ export default function Login({ navigation }) {
     const pressHandlerLogin = () => {
         navigation.navigate('Home');
     }
+    const pressHandlerSignUp = () => {
+        navigation.navigate('SignUp');
+    }
     
     return (
         <View style={globalStyles.container}>
@@ -60,6 +63,9 @@ export default function Login({ navigation }) {
             <View>
                 <Button icon='login' mode='contained' onPress={pressHandlerLogin}>
                     Login
+                </Button>
+                <Button mode='text' onPress={pressHandlerSignUp}>
+                    Don't have an account? Sign up here!
                 </Button>
             </View>
         </View>
