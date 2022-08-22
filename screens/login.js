@@ -3,11 +3,14 @@ import { TextInput, Checkbox, Button } from "react-native-paper";
 import { Text, View, Image } from 'react-native';
 import { globalStyles } from '../styles/global';
 
-export default function Login() {
+export default function Login({ navigation }) {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [checked, setChecked] = useState(false);
+    const pressHandlerLogin = () => {
+        navigation.navigate('Home');
+    }
     
     return (
         <View style={globalStyles.container}>
@@ -55,7 +58,7 @@ export default function Login() {
             </View>
 
             <View>
-                <Button icon='login' mode='contained' onPress={() => console.log('login buttton pressed')}>
+                <Button icon='login' mode='contained' onPress={pressHandlerLogin}>
                     Login
                 </Button>
             </View>
