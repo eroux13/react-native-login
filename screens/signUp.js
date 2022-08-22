@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TextInput, Button } from "react-native-paper";
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { globalStyles } from '../styles/global';
 
 export default function SignUp() {
@@ -11,9 +11,9 @@ export default function SignUp() {
 
   return (
     <View style={globalStyles.container}>
-        <View style={styles.logoContainer}>
-            <Image style={styles.logo} source={require('../assets/favicon.png')} />
-            <Text style={styles.appName}>Vindicators Image Recognition</Text>
+        <View style={globalStyles.logoContainer}>
+            <Image style={globalStyles.logo} source={require('../assets/favicon.png')} />
+            <Text style={globalStyles.appName}>Vindicators Image Recognition</Text>
         </View>
 
         <View>
@@ -50,16 +50,3 @@ export default function SignUp() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  logoContainer: {
-    alignItems: 'center',
-  }, 
-  logo: {
-    marginBottom: 20,
-  },
-  appName: {
-    marginBottom: 40,
-    textAlign: 'center'
-  },
-});

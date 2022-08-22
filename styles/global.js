@@ -5,4 +5,14 @@ export const globalStyles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
     },
+    logoContainer: {
+        alignItems: 'center',
+      }, 
+      logo: {
+        marginBottom: 20,
+      },
+      appName: {
+        marginBottom: 40,
+        textAlign: 'center'
+      },
 });
