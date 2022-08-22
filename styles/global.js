@@ -7,12 +7,24 @@ export const globalStyles = StyleSheet.create({
     },
     logoContainer: {
         alignItems: 'center',
-      }, 
-      logo: {
+    }, 
+    logo: {
         marginBottom: 20,
-      },
-      appName: {
+    },
+    appName: {
         marginBottom: 40,
         textAlign: 'center'
-      },
+    },
+    home: {
+        alignItems: 'center'
+    },
+    settings: {
+        alignItems: 'center'
+    },
+    camera: {
+        alignItems: 'center'
+    },
+    language: {
+        alignItems: 'center'
+    }
 });
