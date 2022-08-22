@@ -1,13 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { 
-  StyleSheet, 
-  Text, 
-  View, 
-  Image,
-  TextInput,
-  TouchableOpacity
-} from 'react-native';
+import { TextInput, Button } from "react-native-paper";
+import { StyleSheet, Text, View, Image } from 'react-native';
+import { globalStyles } from '../styles/global';
 
 export default function SignUp() {
 
@@ -16,82 +10,56 @@ export default function SignUp() {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   return (
-    <View style={styles.container}>
-      <Image style={styles.logo} source={require('../assets/favicon.png')} />
-      <Text style={styles.appName}>Vindicators Image Recognition</Text>
+    <View style={globalStyles.container}>
+        <View style={styles.logoContainer}>
+            <Image style={styles.logo} source={require('../assets/favicon.png')} />
+            <Text style={styles.appName}>Vindicators Image Recognition</Text>
+        </View>
 
-      <StatusBar style='auto' />
-      <View style={styles.inputView}>
-        <TextInput style={styles.TextInput}
-          placeholder='Email'
-          placeholderTextColor='#003f5c'
-          onChangeText={(email) => setEmail(email)}
-        />
-      </View>
+        <View>
+            <TextInput 
+                label='Email'
+                left={<TextInput.Icon name='email'/>}
+                onChangeText={(email) => setEmail(email)}
+            />
+        </View>
 
-      <View style={styles.inputView}>
-        <TextInput style={styles.TextInput}
-          placeholder='Password'
-          placeholderTextColor='#003f5c'
-          secureTextEntry={true}
-          onChangeText={(password) => setPassword(password)}
-        />
-      </View>
+        <View>
+        <TextInput 
+                label='Password'
+                left={<TextInput.Icon name='lock'/>}
+                right={<TextInput.Icon name='eye'/>}
+                onChangeText={(password) => setPassword(password)}
+            />
+        </View>
 
-      <View style={styles.inputView}>
-        <TextInput style={styles.TextInput}
-          placeholder='Confirm Password'
-          placeholderTextColor='#003f5c'
-          secureTextEntry={true}
-          onChangeText={(confirmPassword) => setConfirmPassword(confirmPassword)}
-        />
-      </View>
+        <View>
+        <TextInput 
+                label='Confirm Password'
+                left={<TextInput.Icon name='lock'/>}
+                right={<TextInput.Icon name='eye'/>}
+                onChangeText={(confirmPassword) => setConfirmPassword(confirmPassword)}
+            />
+        </View>
 
-      <TouchableOpacity style={styles.loginButton}>
-          <Text style={styles.loginButton}>SIGN UP</Text> 
-      </TouchableOpacity>
-
+        <View>
+            <Button icon='' mode='contained' onPress={() => console.log('sign up button pressed')}>
+                Sign Up
+            </Button>
+        </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
+  logoContainer: {
     alignItems: 'center',
-    justifyContent: 'center',
-  },
+  }, 
   logo: {
     marginBottom: 20,
   },
   appName: {
     marginBottom: 40,
-  },
-  inputView: {
-    backgroundColor: '#FFC0CB',
-    borderRadius: 30,
-    width: '70%',
-    height: 45,
-    marginBottom: 20,
-    alignItems: 'center'
-  },
-  TextInput: {
-    height: 50,
-    flex: 1,
-    padding: 10,
-    marginLeft: 20,
-  },
-  forgotButton: {
-
-  },
-  loginButton: {
-    width: '80%',
-    borderRadius: 25,
-    height: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 40,
-    backgroundColor: '#FF1493',
+    textAlign: 'center'
   },
 });
