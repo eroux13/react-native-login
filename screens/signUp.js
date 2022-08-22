@@ -3,11 +3,14 @@ import { TextInput, Button } from "react-native-paper";
 import { Text, View, Image } from 'react-native';
 import { globalStyles } from '../styles/global';
 
-export default function SignUp() {
+export default function SignUp({ navigation }) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const pressHandlerLogin = () => {
+    navigation.navigate('Login');
+  }
 
   return (
     <View style={globalStyles.container}>
@@ -46,7 +49,7 @@ export default function SignUp() {
             <Button icon='login' mode='contained' onPress={() => console.log('sign up button pressed')}>
                 Sign Up
             </Button>
-            <Button mode='text' onPress={() => console.log('redirecting to login')}>
+            <Button mode='text' onPress={pressHandlerLogin}>
                 Already sign up? Login here!
             </Button>
         </View>
