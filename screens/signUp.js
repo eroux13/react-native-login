@@ -53,7 +53,7 @@ export default function SignUp({ navigation }) {
                 Sign Up
             </Button>
             <Button mode='text' onPress={pressHandlerLogin}>
-                Already sign up? Login here!
+                Already signed up? Login here!
             </Button>
         </View>
     </View>
