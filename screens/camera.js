@@ -22,12 +22,21 @@ export default function Cam() {
         </View>
     )
   }
+
+  toggleCameraType = () => {
+    setType((current) => (current === CameraType.back ? CameraType.front : CameraType.back))
+  }
+
   return (
     <View style={globalStyles.container}>
         <StatusBar style='dark' />
-        <View style={globalStyles.camera}>
-            <Text>Camera Page</Text>
-        </View>
+        <Camera style={globalStyles.camera} type={type}>
+            <View>
+                <Button onPress={toggleCameraType}>
+                    Flip Camera
+                </Button>
+            </View>
+        </Camera>
     </View>
   );
 }
