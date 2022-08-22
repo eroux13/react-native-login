@@ -43,8 +43,11 @@ export default function SignUp() {
         </View>
 
         <View>
-            <Button icon='' mode='contained' onPress={() => console.log('sign up button pressed')}>
+            <Button icon='login' mode='contained' onPress={() => console.log('sign up button pressed')}>
                 Sign Up
+            </Button>
+            <Button mode='text' onPress={() => console.log('redirecting to login')}>
+                Already sign up? Login here!
             </Button>
         </View>
     </View>
