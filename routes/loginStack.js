@@ -6,13 +6,22 @@ import Home from '../screens/home';
 
 const screens = {
     SignUp: {
-        screen: SignUp
+        screen: SignUp,
+        navigationOptions: {
+            title: 'Sign Up For an Account'
+        }
     },
     Login: {
-        screen: Login
+        screen: Login,
+        navigationOptions: {
+            title: 'Login to Account'
+        }
     },
     Home: {
-        screen: Home
+        screen: Home,
+        navigationOptions: {
+            title: 'Welcome Home Vidicator'
+        }
     }
 }
 
