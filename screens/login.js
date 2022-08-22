@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import { Stack, IconButton} from '@react-native-material/core';
 import { TextInput, Checkbox, Button } from "react-native-paper";
-import { Icon } from '@expo/vector-icons/MaterialCommunityIcons';
-import MaterialIcons from 'react-native-vector-icons/Fontisto'
-import { Text, View, StyleSheet } from 'react-native';
-import { CheckBox } from "react-native-web";
+import { Text, View, Image } from 'react-native';
 import { globalStyles } from '../styles/global';
 
 export default function Login() {
@@ -15,10 +11,15 @@ export default function Login() {
     
     return (
         <View style={globalStyles.container}>
+            <View style={globalStyles.logoContainer}>
+                <Image style={globalStyles.logo} source={require('../assets/favicon.png')} />
+                <Text style={globalStyles.appName}>Vindicators Image Recognition</Text>
+            </View>
+            
             <View>
                 <TextInput 
                     label='Email'
-                    placeholder='john.doe@example.com'
+                    // placeholder='john.doe@example.com'
                     left={<TextInput.Icon name='email'/>}
                     // leading={props => <Icon name='email' {...props}/>}
                     onChangeText={(email) => setEmail(email)}
@@ -27,7 +28,7 @@ export default function Login() {
 
             <View>
                 <TextInput 
-                    label='Email'
+                    label='Password'
                     left={<TextInput.Icon name='lock'/>}
                     right={<TextInput.Icon name='eye'/>}
                     // leading={props => <Icon name='email' {...props}/>}
