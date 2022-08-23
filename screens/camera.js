@@ -31,7 +31,7 @@ export default function Cam() {
     <View style={globalStyles.container}>
         <StatusBar style='dark' />
         <Camera style={globalStyles.camera} type={type}>
-            <View>
+            <View style={globalStyles.flipCamButtonContainer}>
                 <Button style={globalStyles.flipCamButton} icon='repeat' mode='contained' onPress={toggleCameraType}>
                     Flip Camera
                 </Button>
