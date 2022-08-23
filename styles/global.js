@@ -24,6 +24,11 @@ export const globalStyles = StyleSheet.create({
     camera: {
         flex: 1
     },
+    flipCamButton: {
+        // flex: 1,
+        // alignSelf: 'flex-end',
+        alignItems: 'center'
+    },
     language: {
         alignItems: 'center'
     }
