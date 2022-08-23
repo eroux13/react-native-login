@@ -32,7 +32,7 @@ export default function Cam() {
         <StatusBar style='dark' />
         <Camera style={globalStyles.camera} type={type}>
             <View>
-                <Button onPress={toggleCameraType}>
+                <Button style={globalStyles.flipCamButton} icon='repeat' mode='contained' onPress={toggleCameraType}>
                     Flip Camera
                 </Button>
             </View>
