@@ -21,7 +21,7 @@ const screens = {
     Home: {
         screen: MainTabs,
         navigationOptions: {
-            title: 'Welcome Home Vidicator'
+            title: 'Vidicators Image Recognition'
         }
     }
 }
