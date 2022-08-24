@@ -27,6 +27,12 @@ export default function Cam() {
     setType((current) => (current === CameraType.back ? CameraType.front : CameraType.back))
   }
 
+// option to toggle flash
+
+// option to take picture
+
+// option to view gallery
+
   return (
     <View style={globalStyles.container}>
         <StatusBar style='dark' />
