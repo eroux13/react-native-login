@@ -10,6 +10,8 @@ export default function SignUp({ navigation }) {
     <View style={globalStyles.container}>
         <StatusBar style='dark' />
         <View style={globalStyles.language}>
+            {/* Modal that allows user to select translation language */}
+            
             <Text>Language Selection</Text>
         </View>
     </View>
